@@ -4,6 +4,8 @@ import (
 	"bytes"
 	"os"
 	"testing"
+
+	"github.com/MoXcz/aoc/2025/internal/assert"
 )
 
 func TestPart1(t *testing.T) {
@@ -12,12 +14,11 @@ func TestPart1(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	want := 1227775554
+	expected := 1227775554
 	ranges := bytes.Split(bytes.TrimSpace(file), []byte(","))
-	sum := repeatedSumPart1(ranges)
-	if want != sum {
-		t.Errorf("got = %d, want = %d", sum, want)
-	}
+	actual := repeatedSumPart1(ranges)
+
+	assert.Equal(t, actual, expected)
 }
 
 func TestPart2(t *testing.T) {
@@ -26,10 +27,9 @@ func TestPart2(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	want := 4174379265
+	expected := 4174379265
 	ranges := bytes.Split(bytes.TrimSpace(file), []byte(","))
-	sum := repeatedSumPart2(ranges)
-	if want != sum {
-		t.Errorf("got = %d, want = %d", sum, want)
-	}
+	actual := repeatedSumPart2(ranges)
+
+	assert.Equal(t, actual, expected)
 }

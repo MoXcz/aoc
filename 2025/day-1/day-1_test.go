@@ -1,19 +1,21 @@
 package main
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/MoXcz/aoc/2025/internal/assert"
+)
 
 func TestPart1(t *testing.T) {
-	want := 50
-	clicks := runDialPart1(50, 0, "test.txt")
-	if clicks != 3 {
-		t.Errorf("got = %d, want = %d", clicks, want)
-	}
+	expected := 50
+	actual := runDialPart1(50, 0, "test.txt")
+
+	assert.Equal(t, actual, expected)
 }
 
 func TestPart2(t *testing.T) {
-	want := 50
-	clicks := runDial(50, 0, "test.txt")
-	if clicks != 6 {
-		t.Errorf("got = %d, want = %d", clicks, want)
-	}
+	expected := 50
+	actual := runDial(50, 0, "test.txt")
+
+	assert.Equal(t, actual, expected)
 }
