@@ -7,14 +7,14 @@ import (
 )
 
 func TestPart1(t *testing.T) {
-	expected := 50
+	expected := 3
 	actual := runDialPart1(50, 0, "test.txt")
 
 	assert.Equal(t, actual, expected)
 }
 
 func TestPart2(t *testing.T) {
-	expected := 50
+	expected := 6
 	actual := runDial(50, 0, "test.txt")
 
 	assert.Equal(t, actual, expected)

@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	clicks := runDial(50, 0, "input.txt")
+	clicks := runDial(50, 0, "test.txt")
 	fmt.Println("Count:", clicks)
 }
 
